@@ -3,11 +3,28 @@
 <head>
     <title>hello</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" type="text/css" href="./layui/css/layui.css">
+    <script type="text/javascript" src="./layui/layui.js"></script>
 </head>
 <body>
 <p th:text="${name}" >name</p>
-<p th:text="'Hello！ ' + ${name} + '!'" >hello world</p>
-<p th:text="|Hello！ ${name}!|" >hello world</p>
+<p th:text="'Hello！啊啊啊 ' + ${name} + '!'" >hello world</p>
+<div id="hostInfo"></div>
+
+
+
+
 </body>
+<script>
+    layui.use(['layer', 'form'], function(){
+        var layer = layui.layer
+            ,form = layui.form;
+        var info = layui.device("os");
+        var infoStr = JSON.stringify(info);
+        console.info(info);
+        document.getElementById("hostInfo").innerText=infoStr;
+        layer.msg('Hello World');
+    });
+</script>
 
 </html>
