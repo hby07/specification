@@ -12,6 +12,7 @@
     <artifactId>specification</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>specification</name>
+    <packaging>war</packaging>
     <description>Sprcification project for Spring Boot</description>
 
     <properties>
@@ -48,6 +49,12 @@
             <groupId>com.alibaba</groupId>
             <artifactId>fastjson</artifactId>
             <version>1.2.62</version>
+        </dependency>
+        <!--aliyun-OSS-->
+        <dependency>
+            <groupId>com.aliyun.oss</groupId>
+            <artifactId>aliyun-sdk-oss</artifactId>
+            <version>3.5.0</version>
         </dependency>
     </dependencies>
 
