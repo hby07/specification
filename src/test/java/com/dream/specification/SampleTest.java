@@ -21,8 +21,17 @@ public class SampleTest {
     @Test
     public void testSelect(){
         System.out.println("测试mybatis-plus===start");
+        //查询所有user信息
         List<User> list = userMapper.selectList(null);
-        Assert.assertEquals(5,list.size());
+        //添加断言
+        Assert.assertEquals(6,list.size());
         list.forEach(System.out::println);
+        User user = userMapper.selectById(2);
+        System.out.println("\n"+user+"\n");
+        user.setId(8l);
+        user.setAge(25);
+        user.setEmail("hanby0009@gmail.com");
+        user.setName("一个小兵");
+        userMapper.insert(user);
     }
 }
