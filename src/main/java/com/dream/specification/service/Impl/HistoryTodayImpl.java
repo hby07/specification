@@ -2,6 +2,8 @@ package com.dream.specification.service.Impl;
 
 import cn.hutool.http.HttpUtil;
 import cn.hutool.json.JSONUtil;
+import com.baomidou.mybatisplus.core.conditions.Wrapper;
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.dream.specification.constants.HistoryTodayContants;
 import com.dream.specification.domain.HistoryToday;
 import com.dream.specification.mapper.HistoryTodayMapper;
@@ -28,7 +30,8 @@ public class HistoryTodayImpl implements HistoryTodayService {
         map.put("err_code","0");
         map.put("msg","success");
 //        historyToday.setDay(day);
-        List<HistoryToday> list = historyTodayMapper.selectList(day);
+
+        List<HistoryToday> list = historyTodayMapper.selectList(new QueryWrapper<HistoryToday>().eq("day","12/24"));
         if (list.size()>0){
             map.put("list",list);
         }
@@ -51,6 +54,16 @@ public class HistoryTodayImpl implements HistoryTodayService {
             historyToday.setDay((String) map1.get("day"));
             historyTodayMapper.insert(historyToday);
         }
+    }
+
+    @Override
+    public Map getDetail(String eid) {
+        return null;
+    }
+
+    @Override
+    public void insertDetail(String eid) {
+
     }
 
 

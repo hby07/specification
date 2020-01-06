@@ -1,9 +1,11 @@
 package com.dream.specification.domain;
 
+import com.baomidou.mybatisplus.annotation.TableId;
 import org.springframework.stereotype.Component;
 
 @Component
 public class HistoryToday {
+    @TableId
     private String eid;
     private String title;
     private String imgUrl;

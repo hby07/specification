@@ -12,7 +12,7 @@
     <artifactId>specification</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>specification</name>
-    <packaging>war</packaging>
+    <packaging>jar</packaging>
     <description>Sprcification project for Spring Boot</description>
 
     <properties>
@@ -24,19 +24,19 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
             <!--排除springboot自带的tomcat-->
-            <exclusions>
+            <!--<exclusions>
                 <exclusion>
                     <groupId>org.springframework.boot</groupId>
                     <artifactId>spring-boot-starter-tomcat</artifactId>
                 </exclusion>
-            </exclusions>
+            </exclusions>-->
         </dependency>
         <!--引入外部的tomcat-->
-        <dependency>
+        <!--<dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-tomcat</artifactId>
             <scope>provided</scope>
-        </dependency>
+        </dependency>-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-webflux</artifactId>
@@ -61,6 +61,7 @@
         <dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>fastjson</artifactId>
+            <version>1.2.58</version>
         </dependency>
         <!--aliyun-OSS-->
         <dependency>
