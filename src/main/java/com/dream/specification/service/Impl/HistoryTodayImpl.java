@@ -31,7 +31,7 @@ public class HistoryTodayImpl implements HistoryTodayService {
         map.put("msg","success");
 //        historyToday.setDay(day);
 
-        List<HistoryToday> list = historyTodayMapper.selectList(new QueryWrapper<HistoryToday>().eq("day","12/24"));
+        List<HistoryToday> list = historyTodayMapper.selectList(new QueryWrapper<HistoryToday>().eq("day",day));
         if (list.size()>0){
             map.put("list",list);
         }
